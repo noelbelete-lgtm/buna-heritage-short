@@ -24,7 +24,7 @@
       "provider": "gemini",
       "model": "gemini-3.8-flash-tts",
       "voice": "Kore",
-      "style": "Read the following Amharic text aloud in a calm, warm, unhurried voice, like an elder telling a story to family:"
+      "style": "Say calmly and warmly:"
     },
     "video": {
       "provider": "kaggle",

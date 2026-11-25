@@ -28,3 +28,12 @@ Decision:
 - Music: 3 ACE-Step seeds auditioned under the narration at low volume; choose one and say why.
 - Music: caption with tempo inside vs tempo in the bpm field only.
 - Mix: ducking at ratio 6 vs 10. Is the narration intelligible on a phone speaker?
+
+
+## E1: Shorter TTS style instruction   (25 Nov, narration)
+Hypothesis: the long English style prompt is read aloud or adds pauses (6 of 10 lines ran at 0.4 words/s vs 1.0 for the others)
+Change:     style "Read the following Amharic text aloud in a calm, warm, unhurried voice, like an elder telling a story to family:" -> "Say calmly and warmly:"
+Held fixed: voice Kore, model gemini-3.8-flash-tts, same Amharic text
+Result:     s01 17.0s -> 7.0s (0.41 -> 1.00 words/s), s02 16.8s -> 7.3s (0.36 -> 0.82 words/s); lines now match the normal ones
+Evidence:   runs.jsonl narration lines for s01 and s02, 25 Nov
+Decision:   keep the short style instruction

@@ -69,11 +69,12 @@ def run(only=None, force=False) -> None:
             continue
         out = OUTPUTS / STAGE / f"{shot['id']}_{key[:10]}.wav"
         out.parent.mkdir(parents=True, exist_ok=True)
+        time.sleep(22)  # free tier allows 3 requests per minute
         text = f"{t['style']}\n{shot['narration']['am']}"
         ctx = dict(stage=STAGE, provider=t["provider"], model=model, shot_id=shot["id"],
                    params={"voice": t["voice"], "style": t["style"], "chars": len(shot["narration"]["am"])}, cache_key=key)
         try:
-            (pcm, rate), latency, attempt = with_retries(lambda: gemini_tts(model, t["voice"], text), log_ctx=ctx)
+            (pcm, rate), latency, attempt = with_retries(lambda: gemini_tts(model, t["voice"], text), log_ctx=ctx, attempts=2, base_delay=30)
             pcm_to_wav(pcm, rate, out)
         except Exception as e:
             print(f"  {shot['id']}: FAILED ({e}). The shot will be silent; see FAILURES.md")

@@ -1,0 +1,72 @@
+{
+  "s03": {
+    "key": "0b0216f5439f428de6d3e51c983f49f2d1f29811e35628d9bd8e86ccbef32286",
+    "path": "outputs/narration/s03_0b0216f543.wav",
+    "duration_s": 5.471,
+    "text": "ጥሬው ቡና ታጥቦ በምጣድ ላይ ይቆላል። ቤቱ በመዓዛ ይሞላል።",
+    "trimmed_s": 2.54
+  },
+  "s04": {
+    "key": "4c2136eaaa312e8b6758309184055dc49aedc95ac588137e9c7f2f23846e3be3",
+    "path": "outputs/narration/s04_4c2136eaaa.wav",
+    "duration_s": 4.617,
+    "text": "የቡናው ጭስ ለሁሉም ይዞራል። ማንም አይቀርም።",
+    "trimmed_s": 2.83
+  },
+  "s05": {
+    "key": "e4c52230396cf795ce3bc64ba4ef18929d555f698d84f8c974948fcf36581888",
+    "path": "outputs/narration/s05_e4c5223039.wav",
+    "duration_s": 5.539,
+    "text": "የመጀመሪያው ስኒ አቦል ይባላል። ጠንካራ ነው፣ እንደ ጅማሬ።",
+    "trimmed_s": 2.93
+  },
+  "s06": {
+    "key": "acdd77f5ae21d7f09507af774617e624b27690fc3d3eff7ebca6fe243abf29ee",
+    "path": "outputs/narration/s06_acdd77f5ae.wav",
+    "duration_s": 5.516,
+    "text": "ፈንዲሻ ይቀርባል፣ ዕጣን ይጨሳል። ጨዋታው ይጀምራል።",
+    "trimmed_s": 2.61
+  },
+  "s07": {
+    "key": "3c6aa052cb96c97a804e22fbc98f20d8ab67372d7b9675c7ab07fcd11b5af133",
+    "path": "outputs/narration/s07_3c6aa052cb.wav",
+    "duration_s": 4.074,
+    "text": "ሁለተኛው ቶና ነው። ቀለል ይላል፤ ጨዋታውም ይሞቃል።",
+    "trimmed_s": 2.43
+  },
+  "s08": {
+    "key": "1e97dd2f09b0da39e6379957ed544f03b538e210593df2923aef8b1cba885a5a",
+    "path": "outputs/narration/s08_1e97dd2f09.wav",
+    "duration_s": 6.147,
+    "text": "እዚህ ዜና ይሰማል፣ የተጣሉ ይታረቃሉ፣ ሳቅ ይካፈላል።",
+    "trimmed_s": 2.85
+  },
+  "s10": {
+    "key": "dbdb9056a1325170797b0e68758f6ff5843041792679d51556566b8b3f6d16fc",
+    "path": "outputs/narration/s10_dbdb9056a1.wav",
+    "duration_s": 3.835,
+    "text": "ቡና መጠጥ ብቻ አይደለም። አብሮ የመሆን ጊዜ ነው።",
+    "trimmed_s": 2.62
+  },
+  "s01": {
+    "key": "8cb645b9268384a7f2a2a73d45974217dd76eed63d94a61c0a53d305c980668f",
+    "path": "outputs/narration/s01_8cb645b926.wav",
+    "duration_s": 4.707,
+    "text": "በየቀኑ ከሰዓት በኋላ፣ በቤታችን አንድ ሥርዓት ይጀምራል።",
+    "trimmed_s": 2.82
+  },
+  "s02": {
+    "key": "3e90c4c8d9dac65d79bce7363cb66fcaf259394cd54f138f66bc4120a12ea85d",
+    "path": "outputs/narration/s02_3e90c4c8d9.wav",
+    "duration_s": 5.484,
+    "text": "ቄጤማ ይጎዘጎዛል። ስኒዎቹ በረከቦቱ ላይ ይደረደራሉ።",
+    "trimmed_s": 2.3
+  },
+  "s09": {
+    "key": "70a89d04649aa7ef5c72e445375b02e5c8d3a6512ea71bc8a188bd2510749be2",
+    "path": "outputs/narration/s09_70a89d0464.wav",
+    "duration_s": 5.832,
+    "text": "ሦስተኛው በረካ ነው፤ በረከት ማለት ነው። ሳይጠጡት መሄድ ነውር ነው።",
+    "trimmed_s": 2.59
+  }
+}
