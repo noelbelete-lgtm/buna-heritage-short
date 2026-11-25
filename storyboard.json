@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0",
+  "film": {
+    "title": "Buna: The Three Cups",
+    "title_am": "ቡና፡ ሦስቱ ስኒዎች",
+    "logline": "In one afternoon coffee ceremony, three cups (abol, tona and bereka) carry a family's beginning, its conversation and its blessing.",
+    "narration_language": "am",
+    "subtitle_language": "en",
+    "target_duration_s": [60, 90],
+    "fps": 24,
+    "end_card": {
+      "duration_s": 3.5,
+      "lines": [
+        {"text": "Buna: The Three Cups", "size": "large"},
+        {"text": "Made with AI", "size": "medium"},
+        {"text": "Images: FLUX  |  Video: Wan 2.2", "size": "small"},
+        {"text": "Music: ACE-Step  |  Voice: Gemini TTS", "size": "small"}
+      ]
+    }
+  },
+  "models": {
+    "keyframes": {"provider": "cloudflare", "model": "@cf/black-forest-labs/flux-2-klein-4b", "steps": 4},
+    "tts": {
+      "provider": "gemini",
+      "model": "gemini-3.8-flash-tts",
+      "voice": "Kore",
+      "style": "Read the following Amharic text aloud in a calm, warm, unhurried voice, like an elder telling a story to family:"
+    },
+    "video": {
+      "provider": "kaggle",
+      "model": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
+      "width": 480,
+      "height": 480,
+      "num_frames": 73,
+      "steps": 25,
+      "guidance": 5.0
+    },
+    "music": {"provider": "kaggle", "model": "ACE-Step 1.5"}
+  },
+  "style_block": "warm hand-painted gouache illustration, visible brush texture, soft golden afternoon light, palette of terracotta, cream, coffee brown and deep green, gentle film grain, calm and intimate mood, main subject centered in the frame, no text, no letters",
+  "negative_prompt": "text, letters, watermark, logo, extra fingers, deformed hands, distorted face, harsh contrast, photorealistic, flicker, fast motion",
+  "references": {
+    "woman": {
+      "description": "an older Ethiopian woman, seen only from behind or as hands, wearing a white cotton habesha kemis with a green and gold tibeb border, a thin silver ring on her right hand",
+      "sheet_prompt": "character reference sheet of an older Ethiopian woman seen from behind and from the side, face turned away, white cotton habesha kemis with green and gold tibeb border, close-up of her hands with a thin silver ring, plain cream background",
+      "approved_seed": null
+    },
+    "jebena": {
+      "description": "a round black clay jebena coffee pot with a long narrow neck and a woven straw stopper",
+      "sheet_prompt": "object reference sheet of a round black clay jebena coffee pot with a long narrow neck and woven straw stopper, front and side views, plain cream background",
+      "approved_seed": null
+    },
+    "rekebot": {
+      "description": "a small dark wooden rekebot tray holding six small white handleless cups with a thin green painted band",
+      "sheet_prompt": "object reference sheet of a small dark wooden rekebot tray holding six small white handleless coffee cups with a thin green painted band, top and side views, plain cream background",
+      "approved_seed": null
+    }
+  },
+  "shots": [
+    {
+      "id": "s01",
+      "beat": "Arrival: a home in the highlands, smoke already rising",
+      "reason": "Establishes place and time of day; the rising smoke is the film's motif and promises the ceremony before we see it.",
+      "shot_size": "extreme_wide",
+      "duration_s": 7,
+      "refs": [],
+      "keyframe": {"prompt": "extreme wide shot of a small rural house with a corrugated tin roof among tall eucalyptus trees in the Ethiopian highlands at golden hour, a thin line of smoke rising from the house", "seed": 1101},
+      "motion": {"method": "i2v", "prompt": "slow push-in, smoke drifts upward, eucalyptus leaves sway gently in the wind", "camera": "push_in", "seed": 2101},
+      "narration": {"am": "በየቀኑ ከሰዓት በኋላ፣ በቤታችን አንድ ሥርዓት ይጀምራል።", "en": "Every afternoon, in our house, a ritual begins."},
+      "on_screen_text": null,
+      "music_cue": "c1"
+    },
+    {
+      "id": "s02",
+      "beat": "Preparation: the home is made ready",
+      "reason": "The ceremony starts with care for the space itself; hands only, so there is no face to drift between shots.",
+      "shot_size": "close_up",
+      "duration_s": 7,
+      "refs": ["woman", "rekebot"],
+      "keyframe": {"prompt": "close-up from above of a woman's hands scattering fresh long green grass on a floor beside a rekebot tray of small cups", "seed": 1102},
+      "motion": {"method": "i2v", "prompt": "hands slowly scatter grass onto the floor, fixed camera", "camera": "fixed", "seed": 2102},
+      "narration": {"am": "ቄጤማ ይጎዘጎዛል። ስኒዎቹ በረከቦቱ ላይ ይደረደራሉ።", "en": "Fresh grass is spread on the floor. The little cups are lined up on the rekebot."},
+      "on_screen_text": null,
+      "music_cue": "c1"
+    },
+    {
+      "id": "s03",
+      "beat": "Transformation: raw beans become coffee",
+      "reason": "Shows the change from raw to ready; scent is invisible, so smoke stands in for it.",
+      "shot_size": "insert",
+      "duration_s": 8,
+      "refs": [],
+      "keyframe": {"prompt": "close-up of green coffee beans roasting in a flat black iron pan over a small clay charcoal stove, some beans turning brown, wisps of smoke", "seed": 1103},
+      "motion": {"method": "i2v", "prompt": "beans are stirred slowly with a thin metal stick, smoke curls upward, fixed camera", "camera": "fixed", "seed": 2103},
+      "narration": {"am": "ጥሬው ቡና ታጥቦ በምጣድ ላይ ይቆላል። ቤቱ በመዓዛ ይሞላል።", "en": "The green beans are washed and roasted in the pan. The house fills with their scent."},
+      "on_screen_text": null,
+      "music_cue": "c1"
+    },
+    {
+      "id": "s04",
+      "beat": "Inclusion: the smoke is carried to everyone",
+      "reason": "The gesture that says everyone belongs; seen from behind to keep the woman consistent.",
+      "shot_size": "medium",
+      "duration_s": 7,
+      "refs": ["woman"],
+      "keyframe": {"prompt": "medium shot from behind of a woman carrying a smoking roasting pan toward family members seated on low stools in a warm living room, faces not visible", "seed": 1104},
+      "motion": {"method": "i2v", "prompt": "she walks slowly forward, smoke trails behind the pan, camera follows gently", "camera": "push_in", "seed": 2104},
+      "narration": {"am": "የቡናው ጭስ ለሁሉም ይዞራል። ማንም አይቀርም።", "en": "The smoke is carried to everyone in the room. No one is left out."},
+      "on_screen_text": null,
+      "music_cue": "c2"
+    },
+    {
+      "id": "s05",
+      "beat": "First cup: abol",
+      "reason": "Names the first round; the pour from a height is the iconic image of buna.",
+      "shot_size": "close_up",
+      "duration_s": 8,
+      "refs": ["jebena", "rekebot"],
+      "keyframe": {"prompt": "close-up of a jebena pouring a thin stream of dark coffee from a height into a small white cup on a rekebot", "seed": 1105},
+      "motion": {"method": "i2v", "prompt": "coffee pours in a steady thin stream, steam rises, fixed camera", "camera": "fixed", "seed": 2105},
+      "narration": {"am": "የመጀመሪያው ስኒ አቦል ይባላል። ጠንካራ ነው፣ እንደ ጅማሬ።", "en": "The first cup is called abol. It is strong, like a beginning."},
+      "on_screen_text": {"en": "ABOL", "am": "አቦል"},
+      "music_cue": "c2"
+    },
+    {
+      "id": "s06",
+      "beat": "Gathering: popcorn, incense, talk",
+      "reason": "Widens from objects to people; the conversation is the real point of the ceremony.",
+      "shot_size": "medium_wide",
+      "duration_s": 8,
+      "refs": [],
+      "keyframe": {"prompt": "medium wide shot of family members seen from behind sitting in a circle on low wooden stools, a bowl of popcorn on fresh green grass, incense smoke rising from a small clay burner, warm window light", "seed": 1106},
+      "motion": {"method": "i2v", "prompt": "incense smoke drifts slowly, a hand reaches for popcorn, camera drifts slowly to the right", "camera": "pan_right", "seed": 2106},
+      "narration": {"am": "ፈንዲሻ ይቀርባል፣ ዕጣን ይጨሳል። ጨዋታው ይጀምራል።", "en": "Popcorn is passed around, incense burns. The conversation begins."},
+      "on_screen_text": null,
+      "music_cue": "c2"
+    },
+    {
+      "id": "s07",
+      "beat": "Second cup: tona",
+      "reason": "Time passing: the jebena is refilled; lighter coffee, warmer talk.",
+      "shot_size": "close_up",
+      "duration_s": 7,
+      "refs": ["jebena"],
+      "keyframe": {"prompt": "close-up of a jebena resting on glowing charcoal in a small clay stove, steam rising from its neck", "seed": 1107},
+      "motion": {"method": "i2v", "prompt": "steam rises, embers glow and pulse softly, camera slowly pushes in", "camera": "push_in", "seed": 2107},
+      "narration": {"am": "ሁለተኛው ቶና ነው። ቀለል ይላል፤ ጨዋታውም ይሞቃል።", "en": "The second is tona. It is lighter, and the talk grows warmer."},
+      "on_screen_text": {"en": "TONA", "am": "ቶና"},
+      "music_cue": "c2"
+    },
+    {
+      "id": "s08",
+      "beat": "What happens here: news, peace, laughter",
+      "reason": "The emotional centre; an elder's hands hold the memory the film is about.",
+      "shot_size": "insert",
+      "duration_s": 7,
+      "refs": [],
+      "keyframe": {"prompt": "close-up of an elder's wrinkled hands holding a small white handleless cup, soft window light with dust floating in the air, blurred warm room behind", "seed": 1108},
+      "motion": {"method": "i2v", "prompt": "hands slowly lift the cup, dust floats in the light, fixed camera", "camera": "fixed", "seed": 2108},
+      "narration": {"am": "እዚህ ዜና ይሰማል፣ የተጣሉ ይታረቃሉ፣ ሳቅ ይካፈላል።", "en": "Here, news is shared, quarrels are mended, laughter is passed around."},
+      "on_screen_text": null,
+      "music_cue": "c2"
+    },
+    {
+      "id": "s09",
+      "beat": "Third cup: bereka, the blessing",
+      "reason": "Climax: the cup that gives the ceremony its meaning; mirrors the abol pour so the structure is felt.",
+      "shot_size": "close_up",
+      "duration_s": 8,
+      "refs": ["jebena", "rekebot"],
+      "keyframe": {"prompt": "close-up of the third pour from a jebena into a row of small white cups on a rekebot, deep golden late light", "seed": 1109},
+      "motion": {"method": "i2v", "prompt": "coffee pours gently, warm light flickers, camera slowly tilts down", "camera": "tilt_down", "seed": 2109},
+      "narration": {"am": "ሦስተኛው በረካ ነው፤ በረከት ማለት ነው። ሳይጠጡት መሄድ ነውር ነው።", "en": "The third is bereka. It means blessing. To leave before it would be rude."},
+      "on_screen_text": {"en": "BEREKA", "am": "በረካ"},
+      "music_cue": "c3"
+    },
+    {
+      "id": "s10",
+      "beat": "After: the room keeps the warmth",
+      "reason": "Absence after presence; the last wisp of smoke closes the motif and leaves the viewer with the meaning.",
+      "shot_size": "wide",
+      "duration_s": 9,
+      "refs": ["rekebot"],
+      "keyframe": {"prompt": "wide shot of a quiet room at dusk, empty low stools, a rekebot with used cups, dying embers glowing in a clay stove, fresh grass on the floor", "seed": 1110},
+      "motion": {"method": "i2v", "prompt": "embers slowly fade, a last wisp of smoke rises, very slow pull-back", "camera": "pull_back", "seed": 2110},
+      "narration": {"am": "ቡና መጠጥ ብቻ አይደለም። አብሮ የመሆን ጊዜ ነው።", "en": "Coffee is not just a drink. It is time we spend together."},
+      "on_screen_text": null,
+      "music_cue": "c3"
+    }
+  ],
+  "music": {
+    "caption": "warm acoustic Ethiopian krar and masinko, sparse plucked melody with a nostalgic tizita-like pentatonic mood, soft kebero hand drum entering midway, intimate, gentle, home recording warmth, instrumental",
+    "lyrics": null,
+    "instrumental": true,
+    "bpm": 72,
+    "key": null,
+    "duration_s": 85,
+    "seeds": [301, 302, 303],
+    "selected": null,
+    "selection_reason": null,
+    "cues": [
+      {"id": "c1", "shots": ["s01", "s02", "s03"], "note": "Krar alone, sparse and quiet; the house waking up."},
+      {"id": "c2", "shots": ["s04", "s05", "s06", "s07", "s08"], "note": "Kebero enters softly as people gather; warmer, still under the voice."},
+      {"id": "c3", "shots": ["s09", "s10"], "note": "Opening phrase returns for bereka, resolves and fades over the end card."}
+    ]
+  }
+}

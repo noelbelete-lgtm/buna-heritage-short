@@ -1,0 +1,6 @@
+{
+  "_note": "List-price equivalents for COSTS.md. Fill 'usd' from each provider's public price page on the day you measure, and write the date + source in COSTS.md. Leave null if unknown.",
+  "cloudflare": {"unit": "image", "usd": null, "source": "https://developers.cloudflare.com/workers-ai/platform/pricing/ (neurons per image x price per neuron)"},
+  "gemini": {"unit": "audio_second_or_call", "usd": null, "source": "https://ai.google.dev/gemini-api/docs/pricing (paid-tier TTS output price)"},
+  "kaggle": {"unit": "gpu_minute", "usd": null, "source": "on-demand price of one NVIDIA T4 on a public cloud, divided by 60"}
+}

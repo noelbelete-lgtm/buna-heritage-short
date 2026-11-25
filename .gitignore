@@ -1,0 +1,7 @@
+.env
+__pycache__/
+*.pyc
+build/
+outputs/edit/
+outputs/smoke/
+.DS_Store
