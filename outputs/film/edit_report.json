@@ -17,49 +17,49 @@
       "id": "s03",
       "start": 12.391,
       "dur": 6.571,
-      "mode": "kenburns"
+      "mode": "clip"
     },
     {
       "id": "s04",
       "start": 18.962,
       "dur": 5.717,
-      "mode": "kenburns"
+      "mode": "clip"
     },
     {
       "id": "s05",
       "start": 24.679,
       "dur": 6.639,
-      "mode": "kenburns"
+      "mode": "clip"
     },
     {
       "id": "s06",
       "start": 31.318,
       "dur": 6.616,
-      "mode": "kenburns"
+      "mode": "clip"
     },
     {
       "id": "s07",
       "start": 37.934,
       "dur": 5.174,
-      "mode": "kenburns"
+      "mode": "clip"
     },
     {
       "id": "s08",
       "start": 43.108,
       "dur": 7.247,
-      "mode": "kenburns"
+      "mode": "clip"
     },
     {
       "id": "s09",
       "start": 50.355,
       "dur": 6.932,
-      "mode": "kenburns"
+      "mode": "clip"
     },
     {
       "id": "s10",
       "start": 57.287,
       "dur": 7.435,
-      "mode": "kenburns"
+      "mode": "clip"
     }
   ],
   "music_source": "outputs/music/placeholder.wav",
@@ -67,12 +67,12 @@
     "input_i": "-13.68",
     "input_tp": "-1.21",
     "input_lra": "5.80",
-    "input_thresh": "-25.28",
-    "output_i": "-14.39",
+    "input_thresh": "-25.30",
+    "output_i": "-14.40",
     "output_tp": "-1.80",
     "output_lra": "5.20",
     "output_thresh": "-25.75",
     "normalization_type": "dynamic",
-    "target_offset": "0.39"
+    "target_offset": "0.40"
   }
 }

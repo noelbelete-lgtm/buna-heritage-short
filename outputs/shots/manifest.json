@@ -10,5 +10,53 @@
     "path": "outputs/shots/s02_91c88d52c6.mp4",
     "latency_s": 578.2,
     "seed": 2102
+  },
+  "s03": {
+    "key": "ec57454ab551b9ccbb0386ad89953e617dc2572eeb92a391de2bcc81d2f5ba10",
+    "path": "outputs/shots/s03_ec57454ab5.mp4",
+    "latency_s": 633.6,
+    "seed": 2103
+  },
+  "s04": {
+    "key": "9cc52c52c03becd9ac813c187adf596eca6e7ed1ca80f3a1ca64fb74c733b3e2",
+    "path": "outputs/shots/s04_9cc52c52c0.mp4",
+    "latency_s": 617.8,
+    "seed": 2104
+  },
+  "s05": {
+    "key": "1f73c91035045fe0405a1397cc273b164c34e385ec02b956d10ddbb17e8f9f34",
+    "path": "outputs/shots/s05_1f73c91035.mp4",
+    "latency_s": 615.2,
+    "seed": 2105
+  },
+  "s06": {
+    "key": "bebc0232ff861f2cad9a9e4828683209532926cc5427989a60697126bd231f58",
+    "path": "outputs/shots/s06_bebc0232ff.mp4",
+    "latency_s": 620.5,
+    "seed": 2106
+  },
+  "s07": {
+    "key": "e3fddfdc26eb9f70edafd48506ec424f1af7ce52c1245075df76f678e45826cb",
+    "path": "outputs/shots/s07_e3fddfdc26.mp4",
+    "latency_s": 615.4,
+    "seed": 2107
+  },
+  "s08": {
+    "key": "ffe6189f39e95a0374c16428885c4edc0caaad4f730e2e5b0321a22fe25f9e16",
+    "path": "outputs/shots/s08_ffe6189f39.mp4",
+    "latency_s": 617.3,
+    "seed": 2108
+  },
+  "s09": {
+    "key": "c16574a8a8213d02a487b0df542595e393fe1b0620aa3151c2d17edb45501dbc",
+    "path": "outputs/shots/s09_c16574a8a8.mp4",
+    "latency_s": 615.6,
+    "seed": 2109
+  },
+  "s10": {
+    "key": "a4cd388268371c5500932633374522278234c9fc0de91b41bb46d80aed6b93c3",
+    "path": "outputs/shots/s10_a4cd388268.mp4",
+    "latency_s": 617.3,
+    "seed": 2110
   }
 }
