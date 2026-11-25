@@ -24,7 +24,7 @@ from pipeline.common import (OUTPUTS, ROOT, Manifest, ffmpeg, file_hash, find_fo
                              rel, stable_hash)
 
 ASPECTS = {"9x16": (1080, 1920), "16x9": (1920, 1080)}
-LEAD, TAIL = 0.4, 0.6          # silence before / after each narration line
+LEAD, TAIL = 0.3, 0.8  # silence before / after each narration line
 EDIT = OUTPUTS / "edit"
 FILM = OUTPUTS / "film"
 LATIN_FONT = find_font("DejaVu Sans:bold") or find_font("sans:bold")
@@ -43,7 +43,7 @@ def timeline(sb: dict) -> tuple[list[dict], float]:
     for s in sb["shots"]:
         e = nm.valid(s["id"], narration.expected_key(sb, s))
         n = e["duration_s"] if e else 0.0
-        dur = round(max(s["duration_s"], n + LEAD + TAIL), 3)
+        dur = round((max(4.0, n + LEAD + TAIL) if n else s["duration_s"]) + (2.5 if s is sb["shots"][-1] else 0), 3)
         items.append({"shot": s, "start": round(t, 3), "dur": dur, "narr": (ROOT / e["path"]) if e else None, "narr_dur": n})
         t += dur
     return items, round(t, 3)

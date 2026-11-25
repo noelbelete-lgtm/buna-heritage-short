@@ -52,3 +52,19 @@ Held fixed: flux-2-klein-4b, 4 steps, same prompt and style block
 Result:     none of the 8 candidates was clearly better than the originals
 Evidence:   outputs/keyframes/candidates/s07_seed*.png, s08_seed*.png; runs.jsonl 25 Nov
 Decision:   kept original seeds 1107 and 1108; if they still look weak as video, rewrite the prompt instead of re-rolling
+
+## E5: Fitting Wan 2.2 TI2V-5B on a 15 GB T4   (25 Nov, shots)
+Hypothesis: offloading strategy, not resolution, decides whether Wan 5B fits a T4
+Change:     model offload (fp16) -> model offload + fp8 weights -> sequential offload
+Held fixed: 480x480, 73 frames, 25 steps, guidance 5.0, seed per shot
+Result:     model offload: OOM at 14.4 GiB; + fp8: still OOM at 14.5 GiB;
+            sequential: 1.4 GiB GPU memory, 25 steps in 4m42s (11.3 s/step), model load 114 s
+Evidence:   clips/results_gpu0.jsonl, results_gpu0_r2.jsonl (OOM records), wan3.log
+Decision:   sequential offload for all clips; ~5-6 min per clip on one T4
+
+## E6: Narration-driven shot length   (25 Nov, assembly)
+Hypothesis: the pauses Natnael heard are the planned shot length exceeding the trimmed narration
+Change:     shot length max(planned, voice+1.0s) -> max(4s, voice+0.7s); lead 0.4->0.25s, tail 0.6->0.45s
+Held fixed: same narration files, same keyframes, same music
+Result:     film 79.6s -> (new length)s; (your listening note)
+Decision:

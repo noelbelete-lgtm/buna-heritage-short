@@ -1,78 +1,78 @@
 {
-  "duration_s": 79.647,
+  "duration_s": 68.222,
   "shots": [
     {
       "id": "s01",
       "start": 0.0,
-      "dur": 7,
-      "mode": "kenburns"
+      "dur": 5.807,
+      "mode": "clip"
     },
     {
       "id": "s02",
-      "start": 7.0,
-      "dur": 7,
-      "mode": "kenburns"
+      "start": 5.807,
+      "dur": 6.584,
+      "mode": "clip"
     },
     {
       "id": "s03",
-      "start": 14.0,
-      "dur": 8,
+      "start": 12.391,
+      "dur": 6.571,
       "mode": "kenburns"
     },
     {
       "id": "s04",
-      "start": 22.0,
-      "dur": 7,
+      "start": 18.962,
+      "dur": 5.717,
       "mode": "kenburns"
     },
     {
       "id": "s05",
-      "start": 29.0,
-      "dur": 8,
+      "start": 24.679,
+      "dur": 6.639,
       "mode": "kenburns"
     },
     {
       "id": "s06",
-      "start": 37.0,
-      "dur": 8,
+      "start": 31.318,
+      "dur": 6.616,
       "mode": "kenburns"
     },
     {
       "id": "s07",
-      "start": 45.0,
-      "dur": 7,
+      "start": 37.934,
+      "dur": 5.174,
       "mode": "kenburns"
     },
     {
       "id": "s08",
-      "start": 52.0,
-      "dur": 7.147,
+      "start": 43.108,
+      "dur": 7.247,
       "mode": "kenburns"
     },
     {
       "id": "s09",
-      "start": 59.147,
-      "dur": 8,
+      "start": 50.355,
+      "dur": 6.932,
       "mode": "kenburns"
     },
     {
       "id": "s10",
-      "start": 67.147,
-      "dur": 9,
+      "start": 57.287,
+      "dur": 7.435,
       "mode": "kenburns"
     }
   ],
   "music_source": "outputs/music/placeholder.wav",
   "loudness_in": {
-    "input_i": "-13.83",
-    "input_tp": "-1.10",
-    "input_lra": "7.10",
-    "input_thresh": "-25.92",
-    "output_i": "-14.50",
-    "output_tp": "-1.60",
-    "output_lra": "4.60",
-    "output_thresh": "-26.33",
+    "input_i": "-13.68",
+    "input_tp": "-1.21",
+    "input_lra": "5.80",
+    "input_thresh": "-25.28",
+    "output_i": "-14.39",
+    "output_tp": "-1.80",
+    "output_lra": "5.20",
+    "output_thresh": "-25.75",
     "normalization_type": "dynamic",
-    "target_offset": "0.50"
+    "target_offset": "0.39"
   }
 }

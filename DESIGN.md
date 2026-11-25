@@ -65,3 +65,20 @@
 **What they said:**
 
 **What changed:**
+
+
+
+
+## User test: rough cut (Ken Burns stills, Amharic narration, temp music)
+
+**Date:** 25 Nov
+**Prototype:** outputs/film/buna_9x16.mp4, commit 4aac8de
+**How shared:** (Telegram / WhatsApp / Slack / in person)
+
+| person | what they said | what I changed |
+|---|---|---|
+| Dawit | The story is interesting, but the images don't look realistic enough; they feel a little artificial. | Replacing the still pan-and-zoom shots with Wan 2.2 image-to-video clips (real motion); keeping the painted style on purpose, since it reads as memory, and checking whether motion alone fixes "artificial". |
+| Natnael | The voice stops for a moment and then continues; the audio flow needs to be smoother. | Shot length now follows the narration (planned length was up to 1.5 s longer than the voice), and the silence between lines is shorter. |
+| Dibora | I liked the cultural connection, but the ending could be more emotional and engaging. | Rewriting the s10 narration line and letting the score rise under the last shot and the end card. |
+
+**Insight:** the story lands; what holds it back is the craft (stillness, gaps, a flat ending), not the concept.

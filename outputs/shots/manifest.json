@@ -1,0 +1,14 @@
+{
+  "s01": {
+    "key": "25aa1c22a14b6505d6d34ce7d54965c4f8cdbde642d17f6afa8c05d98f3d8138",
+    "path": "outputs/shots/s01_25aa1c22a1.mp4",
+    "latency_s": 595.2,
+    "seed": 2101
+  },
+  "s02": {
+    "key": "91c88d52c60920cebc77024c0c5a2774707167ed1e0052294f49fd60ec361861",
+    "path": "outputs/shots/s02_91c88d52c6.mp4",
+    "latency_s": 578.2,
+    "seed": 2102
+  }
+}
