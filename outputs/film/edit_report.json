@@ -62,17 +62,17 @@
       "mode": "clip"
     }
   ],
-  "music_source": "outputs/music/placeholder.wav",
+  "music_source": "outputs/music/candidates/cand_seed301.wav",
   "loudness_in": {
-    "input_i": "-13.68",
-    "input_tp": "-1.21",
-    "input_lra": "5.80",
-    "input_thresh": "-25.30",
-    "output_i": "-14.40",
-    "output_tp": "-1.80",
+    "input_i": "-13.64",
+    "input_tp": "-1.07",
+    "input_lra": "5.70",
+    "input_thresh": "-25.29",
+    "output_i": "-14.31",
+    "output_tp": "-1.58",
     "output_lra": "5.20",
-    "output_thresh": "-25.75",
+    "output_thresh": "-25.77",
     "normalization_type": "dynamic",
-    "target_offset": "0.40"
+    "target_offset": "0.31"
   }
 }

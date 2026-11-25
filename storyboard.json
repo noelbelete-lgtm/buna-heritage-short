@@ -356,8 +356,8 @@
       302,
       303
     ],
-    "selected": null,
-    "selection_reason": null,
+    "selected": "outputs/music/candidates/cand_seed301.wav",
+    "selection_reason": "calmest under the narration, krar melody stays soft, warm ending",
     "cues": [
       {
         "id": "c1",

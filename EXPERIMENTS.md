@@ -68,3 +68,14 @@ Change:     shot length max(planned, voice+1.0s) -> max(4s, voice+0.7s); lead 0.
 Held fixed: same narration files, same keyframes, same music
 Result:     film 79.6s -> (new length)s; (your listening note)
 Decision:
+Result:     79.6s -> 61.7s (too close to the 60s floor) -> ~67s with 0.8s tail and a 2.5s hold on s10;
+            voice now flows without long stops (your listening note)
+Decision:   keep 0.3s lead / 0.8s tail, plus a 2.5s hold on the final shot for the ending
+
+## E7: Choosing the score from 3 ACE-Step candidates   (25 Nov, music)
+Hypothesis: different seeds of the same caption give clearly different scores; one will sit better under Amharic narration
+Change:     3 seeds (301, 302, 303), same caption, 72 bpm, 85 s, 8 turbo steps, no LM planner
+Held fixed: caption, bpm, duration, model (ACE-Step 1.5 turbo on a Kaggle T4, Python 3.12 venv)
+Result:     ~8 s per track on a T4. 301: (your note); 302: (your note); 303: (your note)
+Evidence:   outputs/music/candidates/*.wav, runs.jsonl music lines
+Decision:   cand_seed301, because (your reason)
