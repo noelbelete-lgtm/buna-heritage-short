@@ -50,3 +50,11 @@ Tried:      a shorter prompt (E1) reduced it but did not stop it; regenerating w
 Resolution: pipeline/trim_lead.py finds the first pause with ffmpeg silencedetect and cuts everything before it; no API calls; originals kept in outputs/narration/untrimmed/
 Cost:       about 30 minutes; 0 model calls
 Next:       when the quota resets, regenerate with no style prompt and compare (planned E3)
+
+## F5: Narration shown as stale after switching model   (25 Nov, pipeline)
+Symptom:    make status showed all 10 narration lines "stale" although the files were fine
+Cause:      the TTS model was overridden in .env, but status computed cache keys without reading .env,
+            so it compared against the old model name in storyboard.json
+Resolution: storyboard.json now records the model actually used (gemini-3.8-flash-lite-tts);
+            narration.tts_model() loads .env before computing keys
+Lesson:     anything that affects a cache key must live in storyboard.json, or a fresh clone regenerates everything

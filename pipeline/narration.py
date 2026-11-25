@@ -20,6 +20,7 @@ STAGE = "narration"
 
 
 def tts_model(sb: dict) -> str:
+    load_env()
     # Model ids change; override with GEMINI_TTS_MODEL without editing the storyboard.
     return env("GEMINI_TTS_MODEL", sb["models"]["tts"]["model"], required=False)
 

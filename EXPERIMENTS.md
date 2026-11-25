@@ -37,3 +37,10 @@ Held fixed: voice Kore, model gemini-3.8-flash-tts, same Amharic text
 Result:     s01 17.0s -> 7.0s (0.41 -> 1.00 words/s), s02 16.8s -> 7.3s (0.36 -> 0.82 words/s); lines now match the normal ones
 Evidence:   runs.jsonl narration lines for s01 and s02, 25 Nov
 Decision:   keep the short style instruction
+
+## E3: Reference sheet selection   (25 Nov, keyframes)
+Hypothesis: one approved reference per character/prop gives a fixed target to check every keyframe against
+Change:     generated 4 seeds (500-503) per reference with flux-2-klein-4b
+Result:     chose seed 503 for woman, jebena and rekebot because (your reason: closest to a real jebena, dress border clearest, ...)
+Evidence:   outputs/reference/*_seed503.png
+Decision:   approved_seed 503 recorded in storyboard.json; keyframes are checked against these by eye
