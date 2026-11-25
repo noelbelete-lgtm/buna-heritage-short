@@ -1,0 +1,78 @@
+{
+  "duration_s": 79.647,
+  "shots": [
+    {
+      "id": "s01",
+      "start": 0.0,
+      "dur": 7,
+      "mode": "kenburns"
+    },
+    {
+      "id": "s02",
+      "start": 7.0,
+      "dur": 7,
+      "mode": "kenburns"
+    },
+    {
+      "id": "s03",
+      "start": 14.0,
+      "dur": 8,
+      "mode": "kenburns"
+    },
+    {
+      "id": "s04",
+      "start": 22.0,
+      "dur": 7,
+      "mode": "kenburns"
+    },
+    {
+      "id": "s05",
+      "start": 29.0,
+      "dur": 8,
+      "mode": "kenburns"
+    },
+    {
+      "id": "s06",
+      "start": 37.0,
+      "dur": 8,
+      "mode": "kenburns"
+    },
+    {
+      "id": "s07",
+      "start": 45.0,
+      "dur": 7,
+      "mode": "kenburns"
+    },
+    {
+      "id": "s08",
+      "start": 52.0,
+      "dur": 7.147,
+      "mode": "kenburns"
+    },
+    {
+      "id": "s09",
+      "start": 59.147,
+      "dur": 8,
+      "mode": "kenburns"
+    },
+    {
+      "id": "s10",
+      "start": 67.147,
+      "dur": 9,
+      "mode": "kenburns"
+    }
+  ],
+  "music_source": "outputs/music/placeholder.wav",
+  "loudness_in": {
+    "input_i": "-13.83",
+    "input_tp": "-1.10",
+    "input_lra": "7.10",
+    "input_thresh": "-25.92",
+    "output_i": "-14.50",
+    "output_tp": "-1.60",
+    "output_lra": "4.60",
+    "output_thresh": "-26.33",
+    "normalization_type": "dynamic",
+    "target_offset": "0.50"
+  }
+}

@@ -58,3 +58,22 @@ Cause:      the TTS model was overridden in .env, but status computed cache keys
 Resolution: storyboard.json now records the model actually used (gemini-3.8-flash-lite-tts);
             narration.tts_model() loads .env before computing keys
 Lesson:     anything that affects a cache key must live in storyboard.json, or a fresh clone regenerates everything
+
+## F6: ACE-Step 1.5 would not install on Kaggle   (25 Nov, music)
+Symptom:    "Package 'ace-step' requires a different Python: 3.13.16 not in '<3.13,>=3.11'",
+            then "No matching distribution found for nano-vllm"
+Cause:      Kaggle moved to Python 3.13; ACE-Step 1.5 pins Python 3.11-3.12, older torch/transformers,
+            and the nano-vllm package used by its optional LM planner
+Tried:      --ignore-requires-python (failed on nano-vllm); read run_generate_test.py to learn the real API
+Resolution: installed with --no-deps, added its other requirements by hand (skipping torch/transformers so the
+            running Wan job was not disturbed), and called generate_music() with thinking=False (no LM planner)
+Cost:       about 30 minutes
+
+## F7: Wan 2.2 out of memory on a T4   (25 Nov, shots)
+Symptom:    s01 OOM after 15s ("14.38 GiB allocated by PyTorch" of 14.56); s02-s10 OOM instantly
+Cause:      the 5B transformer in fp16 plus activations at 480x480x73 frames does not fit 15 GB even with model offload;
+            memory was not released after the first OOM, so every later shot failed too
+Tried:      reading the per-shot error in results_gpu0.jsonl and nvidia-smi
+Resolution: fp8 weight storage (diffusers layerwise casting, compute stays fp16), expandable CUDA segments,
+            free memory after every shot; one GPU at a time because two model copies need >31 GB RAM
+Cost:       ~5 min model load + 15s GPU; 0 clips

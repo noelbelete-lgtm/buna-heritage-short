@@ -44,3 +44,11 @@ Change:     generated 4 seeds (500-503) per reference with flux-2-klein-4b
 Result:     chose seed 503 for woman, jebena and rekebot because (your reason: closest to a real jebena, dress border clearest, ...)
 Evidence:   outputs/reference/*_seed503.png
 Decision:   approved_seed 503 recorded in storyboard.json; keyframes are checked against these by eye
+
+## E4: Re-rolling weak keyframes by seed   (25 Nov, keyframes)
+Hypothesis: s07 and s08 look unrealistic because of an unlucky seed, not the prompt
+Change:     4 extra seeds each for s07 and s08 (--candidates 4), prompt and style unchanged
+Held fixed: flux-2-klein-4b, 4 steps, same prompt and style block
+Result:     none of the 8 candidates was clearly better than the originals
+Evidence:   outputs/keyframes/candidates/s07_seed*.png, s08_seed*.png; runs.jsonl 25 Nov
+Decision:   kept original seeds 1107 and 1108; if they still look weak as video, rewrite the prompt instead of re-rolling
