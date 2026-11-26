@@ -124,7 +124,7 @@ def loudnorm_two_pass(src: pathlib.Path, out: pathlib.Path, i=-14.0, tp=-1.0, lr
     ffmpeg("-i", src, "-af",
            f"loudnorm=I={i}:TP={tp}:LRA={lra}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
            f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:"
-           "linear=true,aresample=48000", "-ar", 48000, out)
+           "linear=true,aresample=48000,alimiter=limit=0.63:level=false,lowpass=f=16000", "-ar", 48000, out)
     return m
 
 
@@ -243,7 +243,7 @@ def final_mux(video: pathlib.Path, audio: pathlib.Path, srt: pathlib.Path, style
     vf = f"subtitles=filename='{srt}':force_style='{style}',format=yuv420p"
     ffmpeg("-i", video, "-i", audio, "-map", "0:v", "-map", "1:a", "-vf", vf, "-r", fps,
            "-c:v", "libx264", "-preset", "medium", "-crf", 20, "-profile:v", "high", "-pix_fmt", "yuv420p",
-           "-c:a", "aac", "-b:a", "192k", "-ar", 48000, "-movflags", "+faststart", "-shortest", out)
+           "-c:a", "aac", "-aac_coder", "twoloop", "-b:a", "256k", "-ar", 48000, "-movflags", "+faststart", "-shortest", out)
 
 
 # ---------------------------------------------------------------- entry points
