@@ -82,3 +82,4 @@
 | Dibora | I liked the cultural connection, but the ending could be more emotional and engaging. | Rewriting the s10 narration line and letting the score rise under the last shot and the end card. |
 
 **Insight:** the story lands; what holds it back is the craft (stillness, gaps, a flat ending), not the concept.
+**Status of user test 2 (26 Nov):** the near-final cut was shared in the cohort's #all-technical-challenge Slack channel; no replies arrived before the deadline.
