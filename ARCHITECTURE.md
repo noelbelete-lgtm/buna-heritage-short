@@ -56,3 +56,12 @@ Keys live in `.env` (git-ignored, template in `.env.example`) and are read from 
 
 - FLUX.1 schnell on Workers AI takes no reference image, so consistency comes from the identical reference text and style block in every prompt, plus shots designed to avoid faces (hands, backs, objects). Switching to FLUX.2 klein with reference images is a planned experiment.
 - Wan 2.2 5B on a T4 is slow and fp16-only; drafts run at 480×480, 73 frames (about 3 s), and only for shots where motion matters most.
+
+## Changes made after the first runs
+
+- **Shot length follows the voice.** Each shot lasts its narration + 0.3 s lead + 0.8 s tail (minimum 4 s), and the last shot holds 2.5 s longer. This came from user feedback about pauses (DESIGN.md, E6).
+- **Narration post-processing.** The TTS sometimes reads its style prompt aloud. `trim_lead.py` cuts everything before the first pause with `silencedetect`, keeps the originals, and logs each cut (E8, F4).
+- **Every cache-key input lives in the storyboard.** The TTS model was once overridden only in `.env`, so `status` computed different keys and showed good files as stale. The model actually used is now recorded in `storyboard.json` (F5).
+- **Audio delivery.** The mix hit -14 LUFS / -1.7 dBTP, but FFmpeg's AAC encoder overshot to +4 dBFS. The chain is now limiter (-4 dB) + 16 kHz lowpass + `twoloop` AAC at 256 kbps; the film measures -14.6 LUFS / -0.7 dBTP (E9).
+- **Kaggle execution.** Wan runs with sequential CPU offload (model offload and fp8 both ran out of memory on a 15 GB T4), one process at a time (two copies exceed 31 GB of RAM), frees GPU memory after every shot, and skips finished clips so a restarted session resumes. ACE-Step runs in its own Python 3.12 venv because Kaggle moved to 3.13 (F6, F7, E5).
+- **Failure isolation.** Every OOM, quota error and timeout is a line in `runs.jsonl`; imports never let a stale clip into the edit.

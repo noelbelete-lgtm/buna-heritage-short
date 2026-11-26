@@ -64,3 +64,17 @@ Details in [ARCHITECTURE.md](ARCHITECTURE.md). Audience and user tests in [DESIG
 ## Cost
 
 $0 spent. List-price equivalent and measured latency per stage are in [COSTS.md](COSTS.md).
+
+## What actually ran (25-26 Nov 2026)
+
+| stage | model | where | measured |
+|---|---|---|---|
+| keyframes | `@cf/black-forest-labs/flux-2-klein-4b` (Apache 2.0) | Cloudflare Workers AI, free | ~8-13 s per image |
+| narration | `gemini-3.8-flash-lite-tts`, voice Kore | Gemini API free tier (3 req/min, 10 req/day) | 10 lines, 22 s pause between calls |
+| shots | Wan 2.2 TI2V-5B, 480x480, 73 frames, 25 steps | Kaggle T4, sequential CPU offload | ~10 GPU min per clip, ~1.4 GB VRAM |
+| music | ACE-Step 1.5 turbo, 8 steps, no LM planner | Kaggle T4, separate Python 3.12 venv | ~8 s per 85 s track |
+| assembly | FFmpeg | local | ~1 min; film 68.2 s, -14.6 LUFS, -0.7 dBTP |
+
+Helper tools: `python -m pipeline.list_models` (model ids your keys can use), `python -m pipeline.trim_lead` (cuts a spoken style prompt off TTS lines, no API calls), `python -m pipeline.diag_audio` (loudness and peak at every mix stage).
+
+Things that differ from the brief: the Gemini model ids, FLUX.1 schnell rejecting seeds, Kaggle's Python 3.13, and the T4 memory limit. Each is in FAILURES.md with its fix.

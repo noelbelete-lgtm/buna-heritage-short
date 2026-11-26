@@ -1,12 +1,12 @@
 # Costs and latency
 
-Measured from `runs.jsonl` with `make report`. Free-tier limits checked on (date):
+Measured from `runs.jsonl` with `make report`. Free-tier limits checked on 25-26 Nov 2026:
 
 | service | free limit found | notes |
 |---|---|---|
-| Gemini API (text, TTS) | | |
-| Cloudflare Workers AI | | daily neuron allowance |
-| Kaggle | | GPU hours per week, T4 ×2 |
+| Gemini API (text, TTS) | TTS: 3 requests/min, 10 requests/day per model (AI Studio rate-limit page) | binding constraint: one full narration = a day's quota |
+| Cloudflare Workers AI | daily neuron allowance; not reached | ~35 images over two days |
+| Kaggle | ~30 GPU h/week; session wipes /kaggle/working on restart | ~2.5 GPU h used incl. failed runs |
 
 ## Measured per stage
 
