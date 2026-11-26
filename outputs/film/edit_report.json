@@ -1,5 +1,5 @@
 {
-  "duration_s": 73.786,
+  "duration_s": 73.449,
   "shots": [
     {
       "id": "s01",
@@ -52,12 +52,12 @@
     {
       "id": "s09",
       "start": 51.106,
-      "dur": 6.932,
+      "dur": 6.595,
       "mode": "clip"
     },
     {
       "id": "s10",
-      "start": 58.038,
+      "start": 57.701,
       "dur": 12.248,
       "mode": "clip"
     }
@@ -65,14 +65,14 @@
   "music_source": "outputs/music/candidates/cand_seed301.wav",
   "loudness_in": {
     "input_i": "-13.68",
-    "input_tp": "-1.17",
-    "input_lra": "6.70",
-    "input_thresh": "-25.23",
-    "output_i": "-14.47",
+    "input_tp": "-1.07",
+    "input_lra": "5.70",
+    "input_thresh": "-25.24",
+    "output_i": "-14.45",
     "output_tp": "-1.73",
-    "output_lra": "5.50",
-    "output_thresh": "-25.80",
+    "output_lra": "5.40",
+    "output_thresh": "-25.78",
     "normalization_type": "dynamic",
-    "target_offset": "0.47"
+    "target_offset": "0.45"
   }
 }
